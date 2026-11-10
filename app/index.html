@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Мой фронт</h1>
+    <p id="data_p"></p> 
+    <script>
+        const teg_p = document.getElementById("data_p")
+        const getData = async () => {
+            const data = await fetch("http://127.0.0.1:8000/app/teams/2/")
+            .then(response => response.json())
+            return data
+        fetch()
+        }
+        getData().then(response => teg_p.textContent = response)
+    </script>
+</body>
+</html>
